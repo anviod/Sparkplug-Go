@@ -1,0 +1,24 @@
+# Sparkplug Edge 配置示例
+mqtt:
+  broker: "tcp://localhost:18083"
+  client_id: "edge-node-01"
+  username: ""
+  password: ""
+  group_id: "EdgeGroup"
+  lwt_topic: "spBv1.0/EdgeGroup/NDEATH/edge-node-01"
+  lwt_payload: "NDEATH"
+  qos: 0
+
+node:
+  id: "edge-node-01"
+  devices:
+    - id: "dev01"
+      type: "simulator"
+      metrics:
+        temp: 25.0
+        humidity: 60.0
+    - id: "dev02"
+      type: "simulator"
+      metrics:
+        temp: 22.0
+        humidity: 55.0
